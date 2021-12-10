@@ -1,0 +1,148 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+:root {
+    --ff-primary: 'Source Sans Pro', sans-serif;
+    --ff-secondary: 'Source Code Pro', monospace;
+    
+    --fw-reg: 300;
+    --fw-bold: 900;
+    
+    --clr-light: #fff;
+    --clr-dark: #303030;
+    --clr-accent: #16e0bd;
+    
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.25rem;
+    --fs-body: 1rem;
+}
+a{
+    color: white;
+}
+
+.index{
+    display: grid;
+    text-align: center;
+}
+
+@media (min-width: 800px) {
+    :root {
+        --fs-h1: 4.5rem;
+        --fs-h2: 3.75rem;
+        --fs-h3: 1.5rem;
+        --fs-body: 1.125rem;
+    }
+}
+body{
+    background: var(--clr-light);
+    color: var(--clr-dark);
+    margin: 0;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-body);
+    line-height: 1.6;
+    background-color: #222222;
+}
+
+h1{
+    margin: 0px;
+    color: white;
+    
+}
+li{
+    display: inline;
+    border: 0px;
+    padding: 0 1em;
+}
+p{
+    color: white;
+}
+.Button-container{
+    position: relative;
+    text-align: right;
+    border-radius: 50%;
+}
+/* CSS USED FOR THE MAIN.JS WHICH IS CURRENTLY NOT IN USE */
+/* .main-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 600px auto auto;
+    text-align: center;
+    background-color: #222222;
+
+} */
+/* CONTENT-CONTAINER IS NOT IN USE DUE TO MAIN.JS NOT IN USE */
+.Content-Container, .section--header{
+   grid-column: 1/-1;
+    grid-row: 2/-1;
+    border: 2px solid white;
+    margin: 10px;
+}
+.header, .section-home, .section-aboutme, .section-portfolio, .section-contact{ 
+    display: grid;
+    grid-column: 1/-1;  
+    border: 2px solid white;
+    margin: 10px;
+
+}
+.section__image--info{
+    width: 250px;
+}
+
+.nav__list{
+padding: 0px;
+justify-content: space-evenly;
+display: flex;
+grid-column: 2;
+margin: 0px;
+
+}
+.section--header{  
+    display: grid;
+    grid-template-columns: repeat(8,auto);
+}
+.borderPadding1, .borderPadding2,.borderPadding3,.borderPadding4,.borderPadding5{
+    border-left: 2px solid grey;
+    height: 76px;        
+    grid-row: 1;
+    grid-column: 2;
+    position: relative;
+    right: 50%;
+    margin: auto;
+ }
+ .borderPadding2{
+    grid-column: 6;
+ }
+ .borderPadding3{
+    grid-column: 7;
+ }
+ .borderPadding4{
+    grid-column: 8;
+ }
+ .nav__item{
+     margin: auto;
+ }
+ .home{
+     grid-column: 1;
+     grid-row: 1;
+ }
+ .contactme{
+     grid-column: 8;
+     grid-row: 1;
+ }
+ .portfolio{
+     grid-column: 7;
+     grid-row: 1;
+ }
+.aboutme{
+    grid-column: 6;
+    grid-row: 1;
+}
+.Header--profession{
+    background: var( --clr-accent);
+    height: 25px;
+    grid-column: 2/6;
+    grid-row: 1;
+}
